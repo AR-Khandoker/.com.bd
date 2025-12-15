@@ -5,6 +5,7 @@
 
   export default defineConfig({
     plugins: [react()],
+     base: "/.com.bd/" ,
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -82,7 +83,8 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'build',
+      outDir: 'dist',
+      chunkSizeWarningLimit: 15000
     },
     server: {
       port: 3000,
